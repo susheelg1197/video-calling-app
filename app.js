@@ -23,8 +23,10 @@ app.get("/user/:user/:roomId", (req, rsp) => {
   if(req.params.roomId!="" || req.params.roomId){
     rsp.redirect(`/room/${req.params.roomId}`);
 
+  }else{
+
+    rsp.redirect(`/room/${uuidv4()}`);
   }
-  rsp.redirect(`/room/${uuidv4()}`);
 });
 app.get("/",(req,res)=>{
   res.render("home");
