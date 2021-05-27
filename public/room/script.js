@@ -7,7 +7,9 @@ const myVideo = document.createElement("video");
 myVideo.muted = true;
 
 var peer = new Peer(undefined, {
-  host:'susheel-video-call-app.herokuapp.com', secure:true, port:443
+  path: "/peerjs",
+  host: "/",
+  secure:true
 });
 
 let myVideoStream;
